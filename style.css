@@ -1,0 +1,22 @@
+body {
+    background-color: white;
+    color: black;
+}
+
+.tiles {
+    display: flex;
+    flex-wrap: wrap;
+    flex: grow 1;;
+    width: 500px;
+    height: 400px;
+    border: solid black 4px;
+    
+}
+
+.tile {
+    height: 60px;
+    width: 60px;
+    border: solid black 4px;
+    margin: 10px;
+}
+
