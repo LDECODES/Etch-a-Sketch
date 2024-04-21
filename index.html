@@ -6,6 +6,7 @@
     <title>Etch-a-Sketch</title>
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="icons/draw_FILL0_wght400_GRAD0_opsz48.png">
 </head>
 <body>
     <div class="nav">
@@ -13,15 +14,20 @@
     </div>
     <div class="content">
         <div class="controls">
-            <button class="button">Grid Size</button>
-            <button class="button">default</button>
-            <button class="button">Rainbow</button>
-            <button class="button">Monochrome</button>
+            <button class="button" id="gridSize">Grid Size</button>
+            <button class="button" id="eraser">Eraser</button>
+            <button class="button" id="default">Default</button>
+            <button class="button" id="rainbow">Rainbow</button>
+            <button class="button" id="monochrome">Monochrome</button>
+            <button class="button" id="resetGrid">Reset Grid</button>
             
 
         </div>
+        <div class="grid"></div>
+    
         
     </div>
+    <div class="footer">© Leon Evans 2024</div>
 
 
 </body>

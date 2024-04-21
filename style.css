@@ -4,9 +4,13 @@ body {
     color: black;
 }
 .Logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
    font-family: Arial, Helvetica, sans-serif;
    font-weight: bolder;
    font-size: xx-large;
+   margin-bottom: 20px;
 }
 
 .tiles {
@@ -16,7 +20,6 @@ body {
     width: 500px;
     height: 400px;
     border: solid black 4px;
-    justify-content: flex-end;
     align-items: flex-end;
     
 }
@@ -27,21 +30,50 @@ body {
     border: solid black 4px;
     margin: 3px;
 }
-
-.controls {
+.content {
     display: flex;
     flex-direction: column;
-    height: 450px;
-    width: 250px;
+    
+    align-items: center;
+    height: 700px;
+}
+.controls {
+    display: flex;
+    flex-direction: row;
+    height: 75px;
+    width: 1000px;
     border: solid black;
     justify-content: space-around;
     align-items: center;
+    justify-content: center;
+    align-items: center;
+    border-radius: 40px;
 }
 
 .button {
-    width: 225px;
-    height: 10%;
+    width: 160px;
+    height: 50px;
+    font-weight: bolder;
+    font-size: larger;
     border: 2px solid black;
     border-radius: 20px;
+    background-color:deepskyblue
+}
+.grid {
+    height: 490px;
+    width: 1000px;
+    border: 3px solid black;
+    margin: 30px;
+    background: white;
+}
+
+.footer {
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: large;
+    font-weight: 500;
+    background-color: deepskyblue;
 }
 
