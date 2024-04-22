@@ -26,14 +26,12 @@ body {
 
 .tile {
     display: flex ;
-    
     border: solid black 4px;
     margin: 3px;
 }
 .content {
     display: flex;
     flex-direction: column;
-    
     align-items: center;
     height: 700px;
 }
@@ -74,6 +72,7 @@ body {
     align-items: center;
     font-size: large;
     font-weight: 500;
+    align-self: flex-end;
     background-color: deepskyblue;
 }
 
