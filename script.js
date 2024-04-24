@@ -48,7 +48,7 @@ content.querySelector('button').addEventListener("click", function(event) {
 });
 
     
-function makeGrid( ) {
+function makeGrid( ){ 
 grid.innerHTML = ''
 }
 
