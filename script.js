@@ -1,30 +1,40 @@
+document.addEventListener("DOMContentLoaded", function() {
 let gridSizeButton = document.querySelector('#gridSize')
 let eraserButton = document.querySelector('#eraser')
 let defaultButton = document.querySelector('#default')
 let rainbowButton = document.querySelector('#rainbow')
 let monochromeButton = document.querySelector('#monochrome')
 let resetButton = document.querySelector('#resetGrid')
+let content = document.querySelectorAll('button');
+let grid = document.querySelector('grid')
+let mode = "";
 
+makeGrid();
 
-document.querySelector('button').addEventListener("click", function(event) {
+content.querySelector('button').addEventListener("click", function(event) {
   // Get the target element that was clicked
   const clickedElement = event.target;
 
   // Use a switch statement to handle different cases
   switch (clickedElement.id) {
       case "gridSize":
-          console.log('hi')
+        changeGridSize();
+        console.log('hello')
         break;
       case "eraser":
+        mode = "eraser";
         break
       
       case "default" :
+        mode = "default"
         break
 
       case "rainbow":
+        mode = "rainbow"
         break
 
       case "monochrome":
+        mode = "monochrome"
         break
 
       case "resetGrid":
@@ -39,7 +49,7 @@ document.querySelector('button').addEventListener("click", function(event) {
 
     
 function makeGrid( ) {
-
+grid.innerHTML = ''
 }
 
 function makeRow() {
@@ -49,3 +59,12 @@ function makeRow() {
 function makeCells() {
 
 }
+
+function changeGridSize(){
+
+
+}
+
+
+
+})
