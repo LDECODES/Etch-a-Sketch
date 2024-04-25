@@ -8,10 +8,11 @@ let resetButton = document.querySelector('#resetGrid')
 let content = document.querySelectorAll('button');
 let grid = document.querySelector('grid')
 let mode = "";
+let size = 0
 
 makeGrid();
 
-content.querySelector('button').addEventListener("click", function(event) {
+document.querySelector('button').addEventListener("click", function(event) {
   // Get the target element that was clicked
   const clickedElement = event.target;
 
@@ -20,6 +21,7 @@ content.querySelector('button').addEventListener("click", function(event) {
       case "gridSize":
         changeGridSize();
         console.log('hello')
+        th
         break;
       case "eraser":
         mode = "eraser";
@@ -30,6 +32,7 @@ content.querySelector('button').addEventListener("click", function(event) {
         break
 
       case "rainbow":
+
         mode = "rainbow"
         break
 
@@ -48,8 +51,9 @@ content.querySelector('button').addEventListener("click", function(event) {
 });
 
     
-function makeGrid( ){ 
-grid.innerHTML = ''
+function makeGrid(size=16){ 
+  
+
 }
 
 function makeRow() {
@@ -61,9 +65,16 @@ function makeCells() {
 }
 
 function changeGridSize(){
-
+size = prompt("Choose a number from 1 to 100")
+if ((0>size)&&(size >= 100)) {
+  makeGrid(size)
+}else {
+  alert("Number must be from 1 to 100")
+}
 
 }
+
+
 
 
 
