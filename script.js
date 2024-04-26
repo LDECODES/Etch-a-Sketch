@@ -6,7 +6,8 @@ let rainbowButton = document.querySelector('#rainbow')
 let monochromeButton = document.querySelector('#monochrome')
 let resetButton = document.querySelector('#resetGrid')
 let content = document.querySelectorAll('button');
-let grid = document.querySelector('grid')
+let grid = document.querySelector('.grid')
+let mode = "";
 
 let size = 0
 
@@ -23,19 +24,22 @@ document.querySelector('button').addEventListener("click", function(event) {
         break;
       case "eraser":
         mode = "eraser";
+        colourMode()
         break
       
       case "default" :
         mode = "default"
+        colourMode()
         break
 
       case "rainbow":
-
         mode = "rainbow"
+        colourMode()
         break
 
       case "monochrome":
         mode = "monochrome"
+        colourMode()
         break
 
       case "resetGrid":
@@ -49,7 +53,8 @@ document.querySelector('button').addEventListener("click", function(event) {
 });
 
     
-function makeGrid(size=16){ 
+function makeGrid(size = 16){ 
+  grid.innerHTML = ''
   for(let i = 0; i < size; i++){ //make and insert rows
     const row = makeRow(size)
     for (let j = 0; j < size; j++) {
@@ -61,7 +66,7 @@ function makeGrid(size=16){
   return;
 }
 
-function makeRow() {
+function makeRow(size) {
   const div = document.createElement('div')
   div.setAttribute("id", "row");
   div.style.display = "flex";
@@ -75,22 +80,40 @@ function makeCells() {
   const cell = document.createElement('div')
   cell.setAttribute("id", "cell")
   cell.style.width = (100/size) + "%"
-  cell.style.height = (100 + "%");
+  cell.style.height = 100 + "%";
   cell.style.border = "solid 1px black";
   cell.style.backgroundColor = "white";
+  cell.style.flexGrow = "1"
+  cell.style.flexShrink = "4"
   return cell;
 }
 
 function changeGridSize(){
 size = prompt("Choose a number from 1 to 100");
-if ((0>size)&&(size >= 100)) {
+if ((size <= 100)&&(size > 0)) {
+  console.log(size)
   makeGrid(size);
-}else if((size <= 0)||(size > 100)){
+}else{
   alert("Number must be from 1 to 100");
-}else {
-  console.log("Something went wrong");
 }
 
+}
+
+function colourMode() {
+ switch(mode){
+ case "eraser" :
+  cell.style.backgroundColor = "white"
+ break
+ case "monochrome":
+  cell.style.backgroundColor(thf)
+ break
+ case "default":
+
+ break
+ case "rainbow" :
+
+ break
+ }
 }
 
 
