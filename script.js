@@ -52,6 +52,8 @@ document.querySelector('button').addEventListener("click", function(event) {
           
 });
 
+
+
     
 function makeGrid(size = 16){ 
   grid.innerHTML = ''
@@ -100,24 +102,35 @@ if ((size <= 100)&&(size > 0)) {
 }
 
 function colourMode() {
- switch(mode){
+  let MODE = mode
+ switch(MODE){
  case "eraser" :
   cell.style.backgroundColor = "white"
  break
  case "monochrome":
-  cell.style.backgroundColor(thf)
+  cell.style.backgroundColor = "lightgrey" 
  break
  case "default":
+  cell.style.backgroundColor = "black"
 
  break
  case "rainbow" :
+ cell.style.backgroundColor = rainbow();
 
  break
  }
 }
 
+function rainbow() {
+
+}
 
 
 
+grid.addEventListener("mouseover", function(e) {
+  console.log(e.target)
+  colourMode(e.target)
+})
 
 })
+
