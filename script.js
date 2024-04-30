@@ -24,22 +24,22 @@ document.querySelector('button').addEventListener("click", function(event) {
         break;
       case "eraser":
         mode = "eraser";
-        colourMode()
+        colourMode(clickedElement)
         break
       
       case "default" :
         mode = "default"
-        colourMode()
+        colourMode(clickedElement)
         break
 
       case "rainbow":
         mode = "rainbow"
-        colourMode()
+        colourMode(clickedElement)
         break
 
       case "monochrome":
         mode = "monochrome"
-        colourMode()
+        colourMode(clickedElement)
         break
 
       case "resetGrid":
@@ -101,7 +101,7 @@ if ((size <= 100)&&(size > 0)) {
 
 }
 
-function colourMode() {
+function colourMode(cell) {
   let MODE = mode
  switch(MODE){
  case "eraser" :
