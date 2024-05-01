@@ -7,7 +7,7 @@ let monochromeButton = document.querySelector('#monochrome')
 let resetButton = document.querySelector('#resetGrid')
 let content = document.querySelectorAll('button');
 let grid = document.querySelector('.grid')
-let mode = "";
+let mode = "monochrome";
 
 let size = 0
 
@@ -102,8 +102,8 @@ if ((size <= 100)&&(size > 0)) {
 }
 
 function colourMode(cell) {
-  let MODE = mode
- switch(MODE){
+  
+ switch(mode){
  case "eraser" :
   cell.style.backgroundColor = "white"
  break
@@ -119,6 +119,7 @@ function colourMode(cell) {
 
  break
  }
+ 
 }
 
 function rainbow() {
