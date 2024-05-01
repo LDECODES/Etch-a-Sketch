@@ -7,23 +7,26 @@ let monochromeButton = document.querySelector('#monochrome')
 let resetButton = document.querySelector('#resetGrid')
 let content = document.querySelectorAll('button');
 let grid = document.querySelector('.grid')
-let mode = "monochrome";
+let mode = "default";
 
 let size = 0
 
 makeGrid();
 
-document.querySelector('button').addEventListener("click", function(event) {
+document.querySelectorAll('button').forEach(button => {
+  button.addEventListener("click", function(event) {
   // Get the target element that was clicked
   const clickedElement = event.target;
 
   // Use a switch statement to handle different cases
   switch (clickedElement.id) {
       case "gridSize":
+      console.log('hello')
         changeGridSize();
         break;
       case "eraser":
         mode = "eraser";
+        console.log('hello')
         colourMode(clickedElement)
         break
       
@@ -49,6 +52,8 @@ document.querySelector('button').addEventListener("click", function(event) {
       default:
         console.log('something went wrong')
   }
+})
+
           
 });
 
