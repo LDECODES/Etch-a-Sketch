@@ -117,10 +117,11 @@ function colourMode(cell) {
  break
  case "default":
   cell.style.backgroundColor = "black"
+  cell.style.color = "white"
 
  break
  case "rainbow" :
- cell.style.backgroundColor = rainbow();
+ cell.style.backgroundColor = rainbow(cell.style.backgroundColor);
 
  break
  }
@@ -128,7 +129,10 @@ function colourMode(cell) {
 }
 
 function rainbow() {
-
+  const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256); 
+    const b = Math.floor(Math.random() * 256); 
+    return `rgb(${r}, ${g}, ${b})`;
 }
 
 
