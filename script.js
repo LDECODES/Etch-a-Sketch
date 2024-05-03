@@ -8,16 +8,12 @@ let resetButton = document.querySelector('#resetGrid')
 let content = document.querySelectorAll('button');
 let grid = document.querySelector('.grid')
 let mode = "default";
-
 let size = 0
-
 makeGrid();
-
 document.querySelectorAll('button').forEach(button => {
   button.addEventListener("click", function(event) {
   // Get the target element that was clicked
   const clickedElement = event.target;
-
   // Use a switch statement to handle different cases
   switch (clickedElement.id) {
       case "gridSize":
